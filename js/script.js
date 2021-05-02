@@ -1,7 +1,7 @@
 
 import initAnimacaoScroll from './modules/animacaoScroll';
 import ScrollSuave from './modules/scrollSuave';
-import initAccordionList from './modules/accordion';
+import AccordionList from './modules/accordion';
 import initTabNav from './modules/tabNav';
 import initModal from './modules/modal';
 import initTooltip from './modules/tooltip'
@@ -14,8 +14,11 @@ import initCountDown from './modules/coutDown'
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init()
 
+const accordionList = new AccordionList('[data-anime="accordion"] dt');
+accordionList.init();
+
+
 initAnimacaoScroll();
-initAccordionList();
 initTabNav();
 initModal();
 initTooltip();
@@ -30,7 +33,7 @@ const minutes = document.querySelector('[data-minutes]');
 const seconds = document.querySelector('[data-seconds]');
 
 setInterval(() => {
-  const diasParaONatal = new initCountDown('30 December 2021 23:59:59 GMT-0300')
+  const diasParaONatal = new initCountDown('26 Jul 2021 23:59:59 GMT-0300');
   days.innerText = diasParaONatal.total.days;
   hours.innerText = diasParaONatal.total.hours;
   minutes.innerText = diasParaONatal.total.minutes;
