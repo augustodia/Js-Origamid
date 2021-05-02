@@ -3,7 +3,7 @@ export default class initCountDown {
     this.futureDate = futureDate;
   }
 
-  get futureDate() {
+  get future() {
     return new Date(this.futureDate);
   }
 
@@ -12,7 +12,7 @@ export default class initCountDown {
   }
 
   get timeStampDiff() {
-    return this.futureDate.getTime() - this.actualDate.getTime();
+    return this.future.getTime() - this.actualDate.getTime();
   }
 
   get days() {
