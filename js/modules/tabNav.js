@@ -28,6 +28,7 @@ export default class TabNav {
       this.ativaNavegacao(0);
       this.addEvent();
     }
+    return this;
   }
 
 }
