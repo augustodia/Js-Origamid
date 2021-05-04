@@ -41,7 +41,8 @@ setInterval(() => {
   seconds.innerText = diasParaONatal.total.seconds;
 }, 1000)
 
-console.log(diasParaONatal.total.days)
-console.log(diasParaONatal.total.hours)
-console.log(diasParaONatal.total.minutes)
-console.log(diasParaONatal.total.seconds)
+
+
+// '[data-modal="container"]'
+// '[data-modal="fechar"]'
+// '[data-modal="abrir"]'
