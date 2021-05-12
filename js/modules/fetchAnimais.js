@@ -31,5 +31,3 @@ async function fetchAnimais(url) {
     console.log(erro)
   }
 }
-
-console.log(fetchAnimais('./animaisApiJson.json'))

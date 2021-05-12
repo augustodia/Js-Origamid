@@ -4,12 +4,13 @@ import ScrollSuave from './modules/scrollSuave';
 import AccordionList from './modules/accordion';
 import TabNav from './modules/tabNav';
 import Modal from './modules/modal';
-import initTooltip from './modules/tooltip'
+import Tooltip from './modules/tooltip';
 import initDropdownMenu from './modules/dropdownMenu'
 import initFuncionamento from './modules/funcionamento'
 import initFetchAnimais from './modules/fetchAnimais'
 import initFetchBitcoin from './modules/fetchBitcoin'
 import initCountDown from './modules/coutDown'
+import initAnimaNumeros from './modules/animacaoNumeros';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init()
@@ -22,14 +23,17 @@ tabNav.init();
 
 const modal = new Modal('[data-modal="container"]','[data-modal="fechar"]','[data-modal="abrir"]' )
 modal.init()
-modal.toggleModal();
+
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
+console.log(tooltip)
 
 initAnimacaoScroll();
-initTooltip();
 initDropdownMenu();
 initFuncionamento();
 initFetchAnimais();
 initFetchBitcoin();
+initAnimaNumeros();
 
 const days = document.querySelector('[data-days]');
 const hours = document.querySelector('[data-hours]');
