@@ -37,7 +37,6 @@ export default class Tooltip {
   onMouseOver({ currentTarget }) {
     // Cria a tooltipbox e coloca em uma propriedade
     this.criarTolltipBox(currentTarget);
-    console.log(currentTarget);
 
     currentTarget.addEventListener("mouseleave", this.onMouseLeave);
 
@@ -53,10 +52,8 @@ export default class Tooltip {
   init() {
     if(this.tooltips.length) {
       this.addTooltipsEvent();
-      
     }
     return this;
   }
-  
   
 }
