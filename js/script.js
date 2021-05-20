@@ -7,7 +7,7 @@ import Modal from './modules/modal';
 import Tooltip from './modules/tooltip';
 import initDropdownMenu from './modules/dropdownMenu'
 import initFuncionamento from './modules/funcionamento'
-import initFetchAnimais from './modules/fetchAnimais'
+import fetchAnimais from './modules/fetchAnimais'
 import initFetchBitcoin from './modules/fetchBitcoin'
 import initCountDown from './modules/coutDown'
 
@@ -30,7 +30,7 @@ console.log(tooltip)
 initAnimacaoScroll();
 initDropdownMenu();
 initFuncionamento();
-initFetchAnimais();
+fetchAnimais('../../animaisApiJson.json', '.numeros-grid');
 initFetchBitcoin();
 
 const days = document.querySelector('[data-days]');
